@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from gallery import views
 
 urlpatterns = [
+    path('gallery/', views.index),
+    path('gallery/collection/<str:collection_name>', views.collection),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <title>Aliswan</title>
+  </head>
+  <body>
+    <div>
+      {% for collection in collections %}
+      <a href="/gallery/collection/{{ collection.name }}"><h2>{{ collection.name }}</h2></a>
+      {% endfor %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aliswan</title>
+  </head>
+  <body>
+    <div>
+      {% for work in works %}
+       {{ work.name }}
+       <img src="/{{ work.image.url }}"/>
+      {% endfor %}
+    </div>
+  </body>
+</html>

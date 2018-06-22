@@ -40,5 +40,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Images
+images
+
 
 # End of https://www.gitignore.io/api/macos,django
