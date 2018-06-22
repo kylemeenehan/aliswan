@@ -2,13 +2,18 @@
 <html>
   <head>
     <title>Aliswan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
   </head>
   <body>
-    <div>
-      {% for work in works %}
-       {{ work.name }}
-       <img src="/{{ work.image.url }}"/>
-      {% endfor %}
-    </div>
+    {% for work in works %}
+      <div class="hero is-fullheight is-light">
+        <div class="hero-head">
+          <h2> {{ work.name }} </h2>
+        </div>
+        <div class="hero-body">
+          <img src="/{{ work.image.url }}"/>
+        </div>
+      </div>
+    {% endfor %}
   </body>
 </html>
