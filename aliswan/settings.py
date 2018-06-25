@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static');
+STATIC_ROOT = os.path.join(BASE_DIR, 'static');
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +28,7 @@ SECRET_KEY = '*5b036u7vudprcm6is$zjlfe3c7xfy^kdgq&cver3jj(&&6b#2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['178.128.160.165']
 
 
 # Application definition
@@ -78,8 +79,7 @@ WSGI_APPLICATION = 'aliswan.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'aliswan'
+        'ENGINE': 'django.db.backends.postgresql'
     }
 }
 
