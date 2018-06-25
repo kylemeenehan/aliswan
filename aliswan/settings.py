@@ -124,3 +124,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR
 ]
+
+try:
+    from local_settings import import *
+except ImportError:
+    pass
