@@ -15,10 +15,10 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static');
-STATIC_ROOT = os.path.join(BASE_DIR, 'static');
-MEDIA_URL='/'
-MEDIA_ROOT = os.path.join(STATIC_ROOT, 'static');
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/'
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -86,7 +86,12 @@ WSGI_APPLICATION = 'aliswan.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'aliswan',
+        'USER': 'postgres',
+        'PASSWORD': '2201',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
