@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'aliswan.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'aliswan',
-        'USER': 'postgres',
-        'PASSWORD': '2201',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql'  # ,
+        # 'NAME': 'aliswan',
+        # 'USER': 'postgres',
+        # 'PASSWORD': '2201',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
     }
 }
 
