@@ -21,6 +21,9 @@ from gallery import views
 router = routers.DefaultRouter()
 router.register(r'collections', views.CollectionViewSet)
 router.register(r'works', views.WorkViewSet)
+router.register(r'photography', views.PhotographyViewSet)
+router.register(r'artdirecting', views.ArtDirectingViewSet)
+router.register(r'directing', views.DirectingViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
