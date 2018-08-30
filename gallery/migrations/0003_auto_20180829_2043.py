@@ -32,19 +32,4 @@ class Migration(migrations.Migration):
                 ('videoId', models.CharField(max_length=100, unique=True)),
             ],
         ),
-        migrations.AlterField(
-            model_name='collection',
-            name='name',
-            field=models.CharField(max_length=256, unique=True),
-        ),
-        migrations.AlterField(
-            model_name='work',
-            name='image',
-            field=models.ImageField(default='images/placeholders/no-image.jpg', upload_to=gallery.models.image_upload_handler),
-        ),
-        migrations.AlterField(
-            model_name='work',
-            name='name',
-            field=models.CharField(max_length=256, unique=True),
-        ),
     ]
