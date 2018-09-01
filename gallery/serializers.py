@@ -18,7 +18,8 @@ class WorkSerializer(serializers.ModelSerializer):
 class PhotographySerializer(serializers.ModelSerializer):
     class Meta:
         model = Photography
-        fields = ('name', 'description', 'dimensions_x', 'dimensions_y')
+        fields = ('name', 'image', 'description',
+                  'dimensions_x', 'dimensions_y')
 
 
 class DirectingSerializer(serializers.ModelSerializer):
