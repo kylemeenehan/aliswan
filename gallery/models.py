@@ -3,11 +3,11 @@ import os
 
 
 def image_upload_handler(self, filename):
-    return 'images/%s/%s.jpg' % (self.collection.name, self.name)
+    return 'static/images/%s/%s.jpg' % (self.collection.name, self.name)
 
 
 def photo_upload_handler(self, filename):
-    return 'photos/%s.jpg' % (self.name)
+    return 'static/photos/%s.jpg' % (self.name)
 # Create your models here.
 
 

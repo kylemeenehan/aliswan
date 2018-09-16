@@ -11,6 +11,8 @@ media
 
 # static
 !static
+static/admin
+static/rest_framework
 
 ### macOS ###
 *.DS_Store
@@ -42,6 +44,7 @@ Temporary Items
 # Images
 images
 photos
+
 # IDE - VSCode
 .vscode/*
 .vscode/settings.json
