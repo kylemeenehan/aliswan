@@ -30,8 +30,8 @@ SECRET_KEY = '*5b036u7vudprcm6is$zjlfe3c7xfy^kdgq&cver3jj(&&6b#2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['178.128.160.165', '127.0.0.1']
-ALLOWED_HOSTS = ['178.128.160.165']
+ALLOWED_HOSTS = ['178.128.160.165', '127.0.0.1']
+# ALLOWED_HOSTS = ['178.128.160.165']
 
 
 # Application definition
@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'aliswan.co.za'  # ,
-    # 'localhost:4200'
+    'localhost:4200'
 )
 # CORS_ORIGIN_ALLOW_ALL = True
 
