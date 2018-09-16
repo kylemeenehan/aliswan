@@ -7,7 +7,7 @@ def image_upload_handler(self, filename):
 
 
 def photo_upload_handler(self, filename):
-    return 'static/photos/%s.jpg' % (self.name)
+    return 'static/images/%s.jpg' % (self.name)
 # Create your models here.
 
 
