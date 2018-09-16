@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/'
-MEDIA_ROOT = os.path.join(STATIC_ROOT, 'static')
+MEDIA_ROOT = STATIC_ROOT + '/'
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,6 +30,7 @@ SECRET_KEY = '*5b036u7vudprcm6is$zjlfe3c7xfy^kdgq&cver3jj(&&6b#2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ['178.128.160.165', '127.0.0.1']
 ALLOWED_HOSTS = ['178.128.160.165']
 
 
@@ -58,7 +59,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    'aliswan.co.za'  # ,
+    # 'localhost:4200'
+)
+# CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'aliswan.urls'
 
@@ -86,12 +91,7 @@ WSGI_APPLICATION = 'aliswan.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql'  # ,
-        # 'NAME': 'aliswan',
-        # 'USER': 'postgres',
-        # 'PASSWORD': '2201',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql'
     }
 }
 

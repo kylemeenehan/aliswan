@@ -3,17 +3,18 @@ import os
 
 
 def image_upload_handler(self, filename):
-    return 'static/images/%s/%s.jpg' % (self.collection.name, self.name)
+    return 'images/%s/%s.jpg' % (self.collection.name, self.name)
 
 
 def photo_upload_handler(self, filename):
-    return 'static/photos/%s.jpg' % (self.name)
+    return 'photos/%s.jpg' % (self.name)
 # Create your models here.
 
 
 class Collection(models.Model):
     name = models.CharField(max_length=256, unique=True)
     description = models.TextField()
+    sort_order = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -24,7 +25,7 @@ class Work(models.Model):
     description = models.TextField()
     image = models.ImageField(
         upload_to=image_upload_handler,
-        default='images/placeholders/no-image.jpg')
+        default='placeholders/no-image.jpg')
     dimensions_x = models.IntegerField()
     dimensions_y = models.IntegerField()
     material = models.CharField(max_length=256)
@@ -57,7 +58,7 @@ class Photography(models.Model):
     description = models.TextField()
     image = models.ImageField(
         upload_to=photo_upload_handler,
-        default='images/placeholders/no-image.jpg')
+        default='placeholders/no-image.jpg')
     dimensions_x = models.IntegerField()
     dimensions_y = models.IntegerField()
 

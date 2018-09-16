@@ -10,7 +10,7 @@ db.sqlite3
 media
 
 # static
-static
+!static
 
 ### macOS ###
 *.DS_Store
@@ -41,7 +41,7 @@ Temporary Items
 
 # Images
 images
-
+photos
 # IDE - VSCode
 .vscode/*
 .vscode/settings.json
