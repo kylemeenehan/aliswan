@@ -1,8 +1,15 @@
 from django.shortcuts import render
-from rest_framework import viewsets
-from gallery.serializers import CollectionSerializer, WorkSerializer, PhotographySerializer, ArtDirectingSerializer, DirectingSerializer
+from rest_framework import request, viewsets
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST
 
-from gallery.models import Collection, Work, Photography, Directing, ArtDirecting
+from gallery.models import ArtDirecting, Collection, Directing, Photography, \
+    Work, Contact
+from gallery.serializers import ArtDirectingSerializer, CollectionSerializer, \
+    ContactSerializer, DirectingSerializer, PhotographySerializer, \
+    WorkSerializer
+
 
 # Create your views here.
 
@@ -43,3 +50,12 @@ class DirectingViewSet(viewsets.ModelViewSet):
 class ArtDirectingViewSet(viewsets.ModelViewSet):
     queryset = ArtDirecting.objects.all()
     serializer_class = ArtDirectingSerializer
+
+
+# class ContactViewSet(request):
+#     queryset = ArtDirecting.objects.all()
+#     serializer = ContactSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+    # return Response(serializer.data, status=status.HTTP_201_CREATED)
+    # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

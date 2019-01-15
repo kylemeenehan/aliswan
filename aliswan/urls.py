@@ -24,6 +24,7 @@ router.register(r'works', views.WorkViewSet)
 router.register(r'photography', views.PhotographyViewSet)
 router.register(r'artdirecting', views.ArtDirectingViewSet)
 router.register(r'directing', views.DirectingViewSet)
+# router.register(r'contact', views.ContactViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
