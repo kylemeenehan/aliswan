@@ -24,11 +24,12 @@ router.register(r'works', views.WorkViewSet)
 router.register(r'photography', views.PhotographyViewSet)
 router.register(r'artdirecting', views.ArtDirectingViewSet)
 router.register(r'directing', views.DirectingViewSet)
-# router.register(r'contact', views.ContactViewSet)
+# router.register(r'contact', views.contact, "contact")
 
 urlpatterns = [
     path('api/', include(router.urls)),
     path('gallery/', views.index),
     path('gallery/collection/<str:collection_name>', views.collection),
     path('admin/', admin.site.urls),
+    path('api/contact/', views.contact)
 ]
