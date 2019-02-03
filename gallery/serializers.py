@@ -44,5 +44,4 @@ class ContactSerializer(serializers.Serializer):
     created = serializers.DateTimeField()
 
     def create(self, validated_data):
-
         return Contact.objects.create(**validated_data)

@@ -28,7 +28,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = '*5b036u7vudprcm6is$zjlfe3c7xfy^kdgq&cver3jj(&&6b#2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['178.128.160.165', '127.0.0.1']
 
@@ -60,7 +60,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'aliswan.co.za',
-    'localhost:4200'
+    '178.128.160.165:8080'
 )
 # CORS_ORIGIN_ALLOW_ALL = True
 

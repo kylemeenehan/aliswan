@@ -94,8 +94,7 @@ Message: %s
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as s:
             s.ehlo()
             s.login('mchrisyd@gmail.com', 'Ic3cr3am!2!#YD')
-            s.sendmail('mchrisyd@gmail.com', 'chris@topher.co.za', message
-                       )
+            s.sendmail('mchrisyd@gmail.com', 'haai@aliswan.co.za', message)
             s.close()
         # except (ex):
         #     print(ex)
